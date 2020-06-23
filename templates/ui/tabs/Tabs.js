@@ -114,7 +114,7 @@ class Tabs extends GridSizer {
             var padding = {
                 left: bottomButtonsOffset,
             };
-            this.add(bottomButtonsSizer, 1, 2, 'left', padding, false);
+            this.add(bottomButtonsSizer, 1, 2, 'right', padding, false);
         }
 
         this.addChildrenMap('background', background);
