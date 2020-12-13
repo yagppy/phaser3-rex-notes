@@ -25,6 +25,7 @@
 1. [Clock](clock.md): A clock to count elapsed time.
 1. [Conditions table](conditionstable.md): Check conditions to find passed tests listed in a csv table.
 1. [ContainerLite](containerlite.md): Control the position and angle of children game objects.
+1. [Containerlite-perspective](containerlite-perspective.md): Snapshot children of containerlite, to a perspective render texture.
 1. [CSV-scenario](csvscenario.md): Run script in csv format.
 1. [CSV-to-hash-table](csvtohashtable.md): Hash table indexed by (col-key, row-key) from csv string.
 1. [Cursor at bound](cursoratbound.md): Map position pf cursor to cursor key state.
@@ -33,7 +34,6 @@
 1. [Drag-rotate](dragrotate.md): Get dragging angle around a specific point.
 1. [Ease-move](easemove.md): Ease-move game object.
 1. [Eight direction](eightdirection.md): Move game object by cursor keys, with a constant speed.
-1. [Effect layer/outline](effectlayer-outline.md): Draw outline of target game objects.
 1. [Event promise](eventpromise.md): Return a [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) of an event.
 1. [Fade-out-destroy](fadeoutdestroy.md): Fade out game object then destroy it.
 1. [Fade-volume](fadevolume.md): Fade-in/fade-out volume of sound.
@@ -72,8 +72,13 @@
 1. [Particles/Bitmap-zone](bitmapzone.md): Particles' emitter zone from canvas bitmap of text/canvas game object.
 1. [Path follower](pathfollower.md): Set position of game object on a path.
 1. [Perlin](perlin.md): Perlin2/Perlin3 noise and simplex2/simplex3 noise.
+1. [Perspective/Card](perspective-card.md): A container with two perspective-images.
+1. [Perspective/Carousel](perspective-carousel.md): A container with cards.
+1. [Perspective/Image](perspective-image.md): Image with perspective rotation.
+1. [Perspective/Render texture](perspective-rendertexture.md): Render texture with perspective rotation.
 1. [Pop up](popup.md): Scale up game object.
 1. [Quest](quest.md): Question manager.
+1. [Raycaster](raycaster.md): Raycaster between obstacles.
 1. [Random place](randomplace.md): Place objects randomly inside an area without overlapping.
 1. [Restorable data](restorabledata.md): Restorable data manager.
 1. [RotateTo](rotateto.md): Rotate game object towards target position with a steady speed.
@@ -92,6 +97,7 @@
 1. [Shader/swirl](shader-swirl.md): Swirl post processing filter.
 1. [Shader/toonify](shader-toonify.md): Draw outlines and quantize color in HSV domain, post processing filter.
 1. [Shake-position](shake-position.md): Shake position of game object.
+1. [Shatter image](shatter-image.md): Shatter image to triangle faces.
 1. [Ship](ship.md): Move game object as a space ship by cursor keys.
 1. [Slider](slider.md): Drag thumb on a slider bar.
 1. [TagText](tagtext.md): Displays text with multi-color, font face, or font size with tags.

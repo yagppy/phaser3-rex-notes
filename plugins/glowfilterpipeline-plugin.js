@@ -1,20 +1,14 @@
-import GlowFilterPipeline from './glowfilterpipeline.js';
+import GlowFilterPostFxPipeline from './glowfilterpipeline.js';
+import BasePostFxPipelinePlugin from './utils/renderer/BasePostFxPipelinePlugin.js';
+import SetValue from './utils/object/SetValue.js';
 
-class GlowFilterPipelinePlugin extends Phaser.Plugins.BasePlugin {
-
+class GlowFilterPipelinePlugin extends BasePostFxPipelinePlugin {
     constructor(pluginManager) {
         super(pluginManager);
+        this.setPostPipelineClass(GlowFilterPostFxPipeline, 'rexGlowFilterPostFx');
     }
-
-    start() {
-        var eventEmitter = this.game.events;
-        eventEmitter.on('destroy', this.destroy, this);
-    }
-
-    add(scene, key, config) {
-        return new GlowFilterPipeline(scene, key, config);
-    }
-
 }
+
+SetValue(window, 'RexPlugins.Pipelines.GlowFilterPostFx', GlowFilterPostFxPipeline);
 
 export default GlowFilterPipelinePlugin;

@@ -41,6 +41,7 @@ import PanFactory from './pan/Factory.js';
 import PinchFactory from './pinch/Factory.js';
 import RotateFactory from './rotate/Factory.js';
 import FlipFactory from './flip/Factory.js';
+import PerspectiveFactory from './perspective/Factory.js';
 
 import { GetParentSizer, GetTopmostSizer } from './utils/GetParentSizer.js';
 import IsPointerInBounds from '../../plugins/utils/input/IsPointerInBounds.js';
@@ -60,6 +61,11 @@ class UIPlugin extends Phaser.Plugins.ScenePlugin {
         super(scene, pluginManager);
 
         this.add = new ObjectFactory(scene);
+    }
+
+    start() {
+        var eventEmitter = this.scene.events;
+        eventEmitter.on('destroy', this.destroy, this);
     }
 
     get viewport() {

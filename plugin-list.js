@@ -12,6 +12,8 @@ module.exports = {
     'persistenceeffectplugin': './plugins/persistenceeffect-plugin.js',
     'lineplugin': './plugins/line-plugin.js',
     'ninepatchplugin': './plugins/ninepatch-plugin.js',
+    'perspectiveimageplugin': './plugins/perspectiveimage-plugin.js',
+    'shatterimageplugin': './plugins/shatterimage-plugin.js',
     // effect layer (shader)
     'effectlayerplugin': './plugins/effectlayer-plugin.js',
     'outlineeffectlayerplugin': './plugins/outlineeffectlayer-plugin.js',
@@ -107,6 +109,7 @@ module.exports = {
     // math
     'gashaponplugin': './plugins/gashapon-plugin.js',
     'perlinplugin': './plugins/perlin-plugin.js',
+    'raycasterplugin': './plugins/raycaster-plugin.js',
     // geom
     'rhombusplugin': './plugins/rhombus-plugin.js',
     'hexagonplugin': './plugins/hexagon-plugin.js',

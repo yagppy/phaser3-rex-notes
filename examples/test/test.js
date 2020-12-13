@@ -9,6 +9,7 @@ class Demo extends Phaser.Scene {
     }
 
     create() {
+        this.add.pointlight(400, 300, 0xff0000, 128, 0.25, 0.1);
     }
 
     update() {
@@ -23,8 +24,7 @@ var config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
-    scene: Demo,
-    backgroundColor: 0x33333
+    scene: Demo
 };
 
 var game = new Phaser.Game(config);

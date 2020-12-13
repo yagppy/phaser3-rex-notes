@@ -37,13 +37,17 @@ nav:
             - Tile sprite: tilesprite.md
             - Nine patch: ninepatch.md
             - Line: line.md
-        - Shader:
-            - Shader: shader.md
-            - Outline effect layer: effectlayer-outline.md
-        - Mesh:
-            - Quad: quad.md
-            - Rope: rope.md
+        - Shader: shader.md
         - Texture: texture.md
+    - Mesh:
+        - Mesh: mesh.md
+        - Perspective:
+            - Image: perspective-image.md
+            - Render texture: perspective-rendertexture.md
+            - Card: perspective-card.md
+            - Carousel: perspective-carousel.md
+        - Shatter image: shatter-image.md
+        - Rope: rope.md
     - Text:
         - Canvas text:
             - Text: text.md
@@ -79,9 +83,15 @@ nav:
         - Tile map: tilemap.md
     - Container:
         - Container: container.md
-        - Container Lite: containerlite.md
+        - Container Lite:
+            - Container Lite: containerlite.md
+            - Perspective: containerlite-perspective.md
         - Grid table: gridtable.md
     - Zone: zone.md
+    - Layer: layer.md
+    - Light:
+        - Light: light.md
+        - Point light: point-light.md
     - Object pool:
         - Group: group.md
     - DOM element:
@@ -159,7 +169,7 @@ nav:
     - Effects: camera-effects.md
     - Controllor: camera-controllor.md    
     - Shader effects:
-        - Render pipeline: render-pipeline.md
+        - Post fx pipeline: postfx-pipeline.md
         - Shader effect: camera-shader-effect.md
         - Color:
             - Glow: shader-glowfilter.md
@@ -217,6 +227,7 @@ nav:
         - LokiJs: lokijs.md
     - Configuration data: config-data.md
     - Canvas image data: canvas-data.md
+    - Tiled map data: tiledmapdata.md
 - Math:
     - Max, min:
         - Interpolation: interpolation.md
@@ -248,6 +259,7 @@ nav:
     - Curve: 
         - Path : path.md
         - Spiral curve: curve-spiral.md
+    - Raycaster: raycaster.md
 - String:
     - Format:
         - Format: format.md

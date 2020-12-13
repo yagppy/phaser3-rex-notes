@@ -6,30 +6,56 @@ Shader effect of camera.
 
 ## Usage
 
-### Setup
+### Register post-fx pipeline
 
-1. [Add render pipeline instance](render-pipeline.md#add-pipeline-instance)
-1. Add filter
+- Register post-fx pipeline in game config
     ```javascript
-    camera.setRenderToTexture(pipelineName);
+    import PostFxClass from 'path';
+    var config = {
+        // ...
+        pipeline: [PostFxClass]
+        // ...
+    };
+    var game = new Phaser.Game(config);
     ```
-    - `pipelineName` :
-        - A string : Name of this render pipeline
-        - A pipeline instance
-1. [Set properties of piepline instance](render-pipeline.md#set-properties-of-filter)
 
-### Other methods
+Some post-fx pipelines:
 
-- Change filter
+- [Glow-filter](shader-glowfilter): Glow post processing filter.
+- [Gray-scale](shader-grayscale.md): Gray scale post processing filter.
+- [Hsl-adjust](shader-hsladjust.md): Adjust color in HSL domain, post processing filter.
+- [Inverse](shader-inverse.md): Inverse color post processing filter.
+- [Outline](shader-outline.md): Outline post processing filter.
+- [Pixelation](shader-pixelation.md): Pixelation post processing filter.
+- [Toonify](shader-toonify.md): Draw outlines and quantize color in HSV domain, post processing filter.
+- [Swirl](shader-swirl.md): Swirl post processing filter.
+
+### Add post-fx pipeline
+
+```javascript
+camera.setPostPipeline(PostFxClass);
+```
+
+- `PostFxClass` : Class of post-fx pipeline.
+
+### Remove post-fx pipeline
+
+- Remove a post-fx pipeline
     ```javascript
-    camera.setPipeline(pipelineName);
+    camera.removePostPipeline(PostFxClass);
+    ```
+- Remove all post-fx pipelines
+    ```javascript
+    camera.resetPipeline(true);
     ```
     or
     ```javascript
-    camera.setPipeline(filter);
+    camera.postPipelines = [];
+    camera.hasPostPipeline = false;
     ```
-    - `pipelineName` : Name of this render pipeline, a string.
-- Clear filter
-    ```javascript
-    camera.clearRenderToTexture();
-    ```
+
+### Get post-fx pipeline
+
+```javascript
+var pipelineInstance = camera.getPostPipeline(PostFxClass);
+```

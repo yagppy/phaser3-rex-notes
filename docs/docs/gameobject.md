@@ -252,33 +252,61 @@ var output = gameObject.getBounds(output);      // output: {x, y, width, height}
         - Canvas render mode only
 - Canvas has more available depending on browser support.
 
-### Render pipeline
+### Post-fx pipeline
 
-- Defaule name of render pipeline : `'MultiPipeline'`
-- [Add render pipeline instance](render-pipeline.md#add-pipeline-instance)
-- Set custom render pipeline
-    ```javascript
-    gameObject.setPipeline(pipelineName);
-    ```
-    - `pipelineName` : Name of this render pipeline, a string.
-- Reset custom render pipeline to defaule render pipeline
-    ```javascript
-    gameObject.resetPipeline();
-    ```
-- Get current name of render pipeline:
-    ```javascript
-    var pipelineName = gameObject.getPipelineName();
-    ```
-- [Set properties of piepline instance](render-pipeline.md#set-properties-of-filter)
+#### Register post-fx pipeline
 
-Some shader effects
+- Register post-fx pipeline in game config
+    ```javascript
+    import PostFxClass from 'path';
+    var config = {
+        // ...
+        pipeline: [PostFxClass]
+        // ...
+    };
+    var game = new Phaser.Game(config);
+    ```
+
+Some post-fx pipelines:
 
 - [Glow-filter](shader-glowfilter): Glow post processing filter.
 - [Gray-scale](shader-grayscale.md): Gray scale post processing filter.
 - [Hsl-adjust](shader-hsladjust.md): Adjust color in HSL domain, post processing filter.
 - [Inverse](shader-inverse.md): Inverse color post processing filter.
+- [Outline](shader-outline.md): Outline post processing filter.
 - [Pixelation](shader-pixelation.md): Pixelation post processing filter.
 - [Toonify](shader-toonify.md): Draw outlines and quantize color in HSV domain, post processing filter.
+- [Swirl](shader-swirl.md): Swirl post processing filter.
+
+#### Add post-fx pipeline
+
+```javascript
+gameObject.setPostPipeline(PostFxClass);
+```
+
+- `PostFxClass` : Class of post-fx pipeline.
+
+#### Remove post-fx pipeline
+
+- Remove a post-fx pipeline
+    ```javascript
+    gameObject.removePostPipeline(PostFxClass);
+    ```
+- Remove all post-fx pipelines
+    ```javascript
+    gameObject.resetPipeline(true);
+    ```
+    or
+    ```javascript
+    gameObject.postPipelines = [];
+    gameObject.hasPostPipeline = false;
+    ```
+
+#### Get post-fx pipeline
+
+```javascript
+var pipelineInstance = gameObject.getPostPipeline(PostFxClass);
+```
 
 ### Size
 
