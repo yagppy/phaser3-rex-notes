@@ -58,7 +58,7 @@ It should only be used if you're looking to change the base size of your game an
 ### Events
 
 ```javascript
-scene.scale.on('resize', function(gameSize, baseSize, displaySize, resolution, previousWidth, previousHeight) {});
+scene.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {});
 ```
 
 - `gameSize`
@@ -67,3 +67,11 @@ scene.scale.on('resize', function(gameSize, baseSize, displaySize, resolution, p
     - `baseSize.width`, `baseSize.height`
 - `displaySize`
     - `displaySize.width`, `displaySize.height`
+
+### Update bounds
+
+This method dose not have to be invoked, unless the canvas position, or visibility is changed via any other method (i.e. via an Angular route).
+
+```javascript
+scene.scale.updateBounds();
+```

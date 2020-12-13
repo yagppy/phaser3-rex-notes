@@ -66,6 +66,8 @@ Arcade physics Image/Sprite/Group object.
             setFrictionY: 0,
             setVelocityX: 0,
             setVelocityY: 0,
+            maxVelocityX: 10000,
+            maxVelocityY: 10000,
             setAngularVelocity: 0,
             setAngularAcceleration: 0,
             setAngularDrag: 0,
@@ -199,6 +201,21 @@ Arcade physics Image/Sprite/Group object.
     var immovable = gameObject.body.immovable;
     ```
 
+#### Pushable
+
+- Enable
+    ```javascript
+    gameObject.setPushable();
+    ```
+- Disable
+    ```javascript
+    gameObject.setPushable(false);
+    ```
+- Get
+    ```javascript
+    var pushable = gameObject.body.pushable;
+    ```
+
 ##### Friction
 
 If this Body is `immovable` and in motion, this the proportion of this Body's movement received by the riding body on each axis.
@@ -276,7 +293,7 @@ Whether this Body's rotation is affected by its angular acceleration and velocit
 
 - Rectangle
     ```javascript
-    gameObject.setSize(width, height, center);
+    gameObject.setBodySize(width, height, center);
     ```
     - `center` : `false` to set body's offset to (0, 0)
 - Circle

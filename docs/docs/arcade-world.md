@@ -28,8 +28,11 @@ var config = {
         //        left: true,
         //        right: true
         //    },
+        //    customUpdate: false,
+        //    fixedStep: true,
         //    fps: 60,
         //    timeScale: 1,     // 2.0 = half speed, 0.5 = double speed
+        //    customUpdate: false,
         //    overlapBias: 4,
         //    tileBias: 16,
         //    forceX: false,
@@ -48,6 +51,29 @@ var config = {
     // ...
 };
 var game = new Phaser.Game(config);
+```
+
+### Update
+
+- Default updating : World updating every tick
+- Custom updating : 
+    1. Set `customUpdate` of arcade config to `false`.
+        - Enable world updating : `scene.physics.enableUpdate()`
+        - Disable world updating : `scene.physics.disableUpdate()`
+    1. Run world updating manually
+        ```javascript
+        scene.physics.world.update(time, delta);
+        ```
+    1. Enable/disable world updating
+        - Enable : `scene.physics.enableUpdate()`
+        - Disable : `scene.physics.disableUpdate()`
+
+#### Step
+
+Advances the simulation by one step.
+
+```javascript
+scene.physics.world.step(delta);
 ```
 
 ### Control
@@ -78,13 +104,46 @@ scene.physics.resume();
     scene.physics.world.setFPS(framerate);
     ```
 
-#### Step
+### Body
 
-Advances the simulation by one step.
+#### Enable
 
 ```javascript
-scene.physics.world.step(delta);
+scene.physics.world.enable(gameObject);
+// scene.physics.world.enable(gameObject, bodyType);
 ```
+
+- `gameObject` : A game object, or array of game objects, or game objects in a [Group](group.md)
+- `bodyType` :
+    - `0` : Dynamic body. Default value.
+    - `1` : Static body.
+
+Or
+
+```javascript
+scene.physics.add.existing(gameObject, bodyType);
+```
+
+See [arcade-body](arcade-body.md#get-physics-body)
+
+#### Disable
+
+```javascript
+scene.physics.world.disable(gameObject);
+```
+
+- `gameObject` : A game object, or array of game objects, or game objects in a [Group](group.md)
+
+#### Add/remove body
+
+- Add body to the local search trees.
+    ```javascript
+    scene.physics.world.add(body);
+    ```
+- Remove body from the local search trees.
+    ```javascript
+    scene.physics.world.disableBody(body);
+    ```
 
 ### Collision
 

@@ -89,7 +89,7 @@ Draw outlines and quantize color in HSV domain, post processing filter. [Referen
     - `edgeColor` : Color of edge, could be a number `0xRRGGBB`, or a JSON object `{r:255, g:255, b:255}`
 1. Add to render pipeline
     ```javascript
-    scene.game.renderer.addPipeline(pipelineName, pipelineInstance);
+    scene.game.renderer.pipelines.add(pipelineName, pipelineInstance);
     ```
 1. Apply filter
     - To camera
@@ -178,6 +178,10 @@ Draw outlines and quantize color in HSV domain, post processing filter. [Referen
         - Green: `color.green`, 0~255.
         - Blue: `color.blue`, 0~255.
 - Set
+    ```javascript
+    pipelineInstance.setEdgeColor(value);
+    ```
+    or
     ```javascript
     pipelineInstance.edgeColor = value;
     ```

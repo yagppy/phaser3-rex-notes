@@ -662,18 +662,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../shader/" title="Shader" class="md-nav__link">
-      Shader
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -809,10 +797,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-3" type="checkbox" id="nav-4-2-3">
     
     <label class="md-nav__link" for="nav-4-2-3">
-      Mesh
+      Shader
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-2-3">
+        Shader
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shader/" title="Shader" class="md-nav__link">
+      Shader
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../effectlayer-outline/" title="Outline effect layer" class="md-nav__link">
+      Outline effect layer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-4" type="checkbox" id="nav-4-2-4">
+    
+    <label class="md-nav__link" for="nav-4-2-4">
+      Mesh
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-4">
         Mesh
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2765,6 +2801,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../shader-outline/" title="Outline" class="md-nav__link">
+      Outline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../shader-toonify/" title="Toonify" class="md-nav__link">
       Toonify
     </a>
@@ -3054,6 +3102,66 @@
 
   <li class="md-nav__item">
     <a href="../tcrp-player/" title="Player" class="md-nav__link">
+      Player
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-5" type="checkbox" id="nav-9-2-5">
+    
+    <label class="md-nav__link" for="nav-9-2-5">
+      Arcade-TCRP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-2-5">
+        Arcade-TCRP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arcade-tcrp-recoder/" title="Recoder" class="md-nav__link">
+      Recoder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arcade-tcrp-step-runner/" title="Step runner" class="md-nav__link">
+      Step runner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arcade-tcrp-player/" title="Player" class="md-nav__link">
       Player
     </a>
   </li>
@@ -4916,6 +5024,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../plugin-list/" title="Plugin list" class="md-nav__link">
+      Plugin list
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../tools/" title="Tools" class="md-nav__link">
       Tools
     </a>
@@ -5065,9 +5185,17 @@
 <li>Get key object
     <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">keyObj</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">addKey</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">);</span>  <span class="c1">// see `Key map` section</span>
 <span class="c1">// var keyObj = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);</span>
-</code></pre></div></li>
+</code></pre></div>
+    or
+    <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">keyObj</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">addKey</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="nx">enableCapture</span><span class="p">,</span> <span class="nx">emitOnRepeat</span><span class="p">);</span>
+</code></pre></div><ul>
+<li><code>enableCapture</code> : Automatically call <code>preventDefault</code> on the native DOM browser event for the key codes being added.</li>
+<li><code>emitOnRepeat</code> : Controls if the Key will continuously emit a 'down' event while being held down (true), or emit the event just once (false, the default).</li>
+</ul>
+</li>
 <li>Get key objects
     <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">addKeys</span><span class="p">(</span><span class="s1">&#39;W,S,A,D&#39;</span><span class="p">);</span>  <span class="c1">// keys.W, keys.S, keys.A, keys.D</span>
+<span class="c1">// var keys = scene.input.keyboard.addKeys(&#39;W,S,A,D&#39;, enableCapture, emitOnRepeat);</span>
 </code></pre></div>
     or
     <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">addKeys</span><span class="p">({</span>
@@ -5078,6 +5206,13 @@
 <span class="p">});</span>  <span class="c1">// keys.up, keys.down, keys.left, keys.right</span>
 </code></pre></div></li>
 <li>Remove key object
+    <div class="codehilite"><pre><span></span><code><span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">removeAllKeys</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="c1">// scene.input.keyboard.removeAllKeys(destroy);</span>
+</code></pre></div><ul>
+<li><code>destroy</code> : Call <code>Key.destroy</code> on each removed Key object</li>
+</ul>
+</li>
+<li>Remove all key objects
     <div class="codehilite"><pre><span></span><code><span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">removeKey</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">);</span>
 <span class="c1">// scene.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.W);</span>
 </code></pre></div></li>

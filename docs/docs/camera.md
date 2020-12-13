@@ -16,7 +16,8 @@ Each scene has one or more cameras.
     ```
 - Add new camera
     ```javascript
-    var camera = scene.cameras.add(x, y, width, height);
+    var camera = scene.cameras.add();
+    // var camera = scene.cameras.add(x, y, width, height);
     ```
 - Add existed camera
     ```javascript
@@ -263,7 +264,6 @@ See [Scroll factor](gameobject.md#scroll-factor) in game object.
     ```
     - `x` , `y` : Position of camera.
     - `out` : World position `{x, y}`
-    - Works for zoom of 1 with any resolution, but **resolution > 1 and zoom !== 1 breaks**
 
 ### Set background color
 

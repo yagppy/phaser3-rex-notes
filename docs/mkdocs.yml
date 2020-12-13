@@ -28,8 +28,7 @@ nav:
             - Sprite: sprite.md
             - Animation: animation.md
             - Video: video.md
-            - Circle mask image: circlemaskimage.md            
-            - Shader: shader.md
+            - Circle mask image: circlemaskimage.md
         - Multiple images: 
             - Blitter: blitter.md
             - Particles:
@@ -38,10 +37,13 @@ nav:
             - Tile sprite: tilesprite.md
             - Nine patch: ninepatch.md
             - Line: line.md
+        - Shader:
+            - Shader: shader.md
+            - Outline effect layer: effectlayer-outline.md
         - Mesh:
             - Quad: quad.md
             - Rope: rope.md
-        - Texture: texture.md        
+        - Texture: texture.md
     - Text:
         - Canvas text:
             - Text: text.md
@@ -90,7 +92,7 @@ nav:
     - Behaviors:
         - Actions:
             - Group actions: groupactions.md
-            - Quad/Hexagon grid align: gridalign.md    
+            - Quad/Hexagon grid align: gridalign.md
             - Random place: randomplace.md
         - Move to: moveto.md
         - Rotate to: rotateto.md
@@ -165,6 +167,7 @@ nav:
             - Inverse: shader-inverse.md
             - HSL adjust: shader-hsladjust.md
         - Outline:
+            - Outline: shader-outline.md
             - Toonify: shader-toonify.md
         - Position:
             - Swirl: shader-swirl.md
@@ -184,6 +187,10 @@ nav:
       - TCRP:
           - Recoder: tcrp-recoder.md
           - Player: tcrp-player.md
+      - Arcade-TCRP:
+          - Recoder: arcade-tcrp-recoder.md
+          - Step runner: arcade-tcrp-step-runner.md
+          - Player: arcade-tcrp-player.md          
     - FSM: fsm.md    
     - CSV table:
         - Conditions table: conditionstable.md
@@ -193,7 +200,7 @@ nav:
 - Data:
     - Data manager: 
         - Built-in data: datamanager.md
-        - Restorable data: restorabledata.md    
+        - Restorable data: restorabledata.md
         - Buff data: buffdata.md
     - Set: structs-set.md
     - Array:
@@ -234,10 +241,10 @@ nav:
         - Line: geom-line.md
         - Point: geom-point.md
         - Ellipse: geom-ellipse.md
-        - Triangle: geom-triangle.md        
+        - Triangle: geom-triangle.md
         - Polygon: geom-polygon.md
         - Rhombus: geom-rhombus.md
-        - Hexagon: geom-hexagon.md        
+        - Hexagon: geom-hexagon.md
     - Curve: 
         - Path : path.md
         - Spiral curve: curve-spiral.md
@@ -255,7 +262,7 @@ nav:
 - Time:
     - Date: date.md
     - Timer: timer.md
-    - Timeline: timeline.md    
+    - Timeline: timeline.md
     - Clock: clock.md
     - Life time: lifetime.md
     - Away time: awaytime.md
@@ -313,7 +320,8 @@ nav:
         - ID-alias: firebase-idalias.md
 - Storage:
     - LocalStorage: localstorage.md
-    - LocalForage: localforage.md        
+    - LocalForage: localforage.md
+- Plugin list: plugin-list.md
 - Tools: tools.md
 
 
@@ -324,7 +332,7 @@ extra_javascript:
 theme:
     name: 'material'
     logo:
-        icon: 'memory'    
+        icon: 'memory'
     favicon: 'images/logo.svg'
     palette:
         primary: 'blue'

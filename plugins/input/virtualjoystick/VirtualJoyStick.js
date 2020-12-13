@@ -110,10 +110,12 @@ class VirtualJoyStick {
 
     set x(x) {
         this.base.x = x;
+        this.thumb.x = x;
     }
 
     set y(y) {
         this.base.y = y;
+        this.thumb.y = y;
     }
 
     get x() {
@@ -126,10 +128,12 @@ class VirtualJoyStick {
 
     setVisible(visible) {
         this.visible = visible;
+        return this;
     }
 
     toggleVisible() {
         this.visible = !this.visible;
+        return this;
     }
 
     get visible() {
@@ -167,11 +171,6 @@ class VirtualJoyStick {
         return this;
     }
 
-    setVisible(visible) {
-        this.visible = visible;
-        return this;
-    }
-
     addBase(gameObject, config) {
         if (this.base) {
             this.base.destroy();
@@ -204,6 +203,7 @@ class VirtualJoyStick {
     setScrollFactor(scrollFactor) {
         this.base.setScrollFactor(scrollFactor);
         this.thumb.setScrollFactor(scrollFactor);
+        return this;
     }
 
     boot() {

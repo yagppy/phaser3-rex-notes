@@ -143,7 +143,9 @@ Also destroy all children.
 
 This container game object inherits from [Zone](zone.md).
 
-### Add(pin) child
+### Add child
+
+#### Pin
 
 Add(pin) a game obejct to container
 
@@ -171,6 +173,21 @@ These world properties of children will be changed with container.
         - For example, container-lite is at (100, 100), and child is at **(110, 110)**, then child will be placed at (110, 110) after adding to container-lite.
     - This behavior is different from [official container](container.md), which using related position of child when adding to container.
         - For example, official container is at (100, 100), and child is at **(10, 10)**, then child will be placed at (110, 110) after adding to official container.
+
+#### Add local
+
+```javascript
+container.addLocal(child);
+```
+
+or
+
+```javascript
+container.addLocalMultiple(children);
+```
+
+Add child to container with related properties, like official container.  
+For example, container-lite is at (100, 100), and child is at **(10, 10)**, then child will be placed at (110, 110) after adding to container-lite.
 
 ### Remove child
 
@@ -239,38 +256,16 @@ Reference [Group](group.md)
 #### Position
 
 ```javascript
-// child.x = x;
-// child.y = y;
-container.resetChildPositionState(child);
-```
-
-or
-
-```javascript
 container.setChildPosition(child, x, y);
 ```
 
 #### Visible
 
 ```javascript
-// child.visible = visible;
-container.resetChildVisibleState(child);
-```
-
-or
-
-```javascript
 container.setChildVisible(child, visible);
 ```
 
 #### Alpha
-
-```javascript
-// child.child = child;
-container.resetChildAlphaState(child);
-```
-
-or
 
 ```javascript
 container.setChildAlpha(child, alpha);
@@ -362,9 +357,6 @@ container.tweenChild({
 
 ## Compare with Official Container
 
-- Nested container :
-    - [Container](container.md) : Feature of nested container will be dropped after v3.12.
-    - Container-Lite : Support nested container.
 - Position/anlge/scale of a child object :
     - [Container](container.md) : Local position/anlge/scale, responding to parent container, not a world position/anlge/scale.
     - Container-Lite : World position/anlge/scale.

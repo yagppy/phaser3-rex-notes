@@ -12,6 +12,9 @@ module.exports = {
     'persistenceeffectplugin': './plugins/persistenceeffect-plugin.js',
     'lineplugin': './plugins/line-plugin.js',
     'ninepatchplugin': './plugins/ninepatch-plugin.js',
+    // effect layer (shader)
+    'effectlayerplugin': './plugins/effectlayer-plugin.js',
+    'outlineeffectlayerplugin': './plugins/outlineeffectlayer-plugin.js',
 
     // custom file loader      
     'webfontloaderplugin': './plugins/webfontloader-plugin.js',
@@ -79,6 +82,7 @@ module.exports = {
     'sequenceplugin': './plugins/sequence-plugin.js',
     'fsmplugin': './plugins/fsm-plugin.js',
     'tcrpplugin': './plugins/tcrp-plugin.js',
+    'arcadetcrpplugin': './plugins/arcadetcrp-plugin.js',
     'csvscenarioplugin': './plugins/csvscenario-plugin.js',
     'waiteventsplugin': './plugins/waitevents-plugin.js',
     'eventpromiseplugin': './plugins/eventpromise-plugin.js',
@@ -105,7 +109,7 @@ module.exports = {
     'perlinplugin': './plugins/perlin-plugin.js',
     // geom
     'rhombusplugin': './plugins/rhombus-plugin.js',
-    'hexagonplugin': './plugins/hexagon-plugin.js',    
+    'hexagonplugin': './plugins/hexagon-plugin.js',
     // curve
     'spiralcurveplugin': './plugins/spiralcurve-plugin.js',
 
@@ -121,6 +125,7 @@ module.exports = {
     'hsladjustpipelineplugin': './plugins/hsladjustpipeline-plugin.js',
     'glowfilterpipelineplugin': './plugins/glowfilterpipeline-plugin.js',
     'toonifypipelineplugin': './plugins/toonifypipeline-plugin.js',
+    'outlinepipelineplugin': './plugins/outlinepipeline-plugin.js',
 
     // board
     'boardplugin': './plugins/board-plugin.js',

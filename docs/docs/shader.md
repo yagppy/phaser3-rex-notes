@@ -20,7 +20,7 @@ Reference: [load glsl](loader.md#glsl)
 var shader = scene.add.shader(key, x, y, width, height, textures);
 ```
 
-- `key` : The key of the shader to use from the *shader cache*, or a BaseShader instance.
+- `key` : The key of the shader to use from the *shader cache*, or a [BaseShader instance](shader.md#baseshader).
 - `x`, `y` : Position.
 - `width`, `height` : Size.
 - `textures` : Optional array of texture keys to bind to the iChannel0, iChannel1, iChannel2, iChannel3 uniforms. Lots of shaders expect textures to be **power-of-two sized**.
@@ -89,6 +89,19 @@ var shader = scene.make.shader({
 
 ### Sampler2D uniform
 
+- Default uniform mappings :
+    - `resolution` (2f) - Set to the size of this shader.
+        - `uniform vec2 resolution;` in GLSL.
+    - `time` (1f) - The elapsed game time, in seconds.
+        - `uniform float time;` in GLSL.
+    - `mouse` (2f) - If a pointer has been bound (with `setPointer`), this uniform contains its position each frame.
+        - `uniform vec2 mouse;` in GLSL.
+    - `date` (4fv) - A vec4 containing the year, month, day and time in seconds.
+        - `uniform vec4 date;` in GLSL.
+    - `sampleRate` (1f) - Sound sample rate. 44100 by default.
+        - `uniform float sampleRate;` in GLSL.
+    - `iChannel0...3` (sampler2D) - Input channels 0 to 3. `null` by default.
+        `uniform sampler2D iChannel0;` in GLSL.
 - Get uniform object
     ```javascript
     var uniform = shader.getUniform(key);
@@ -104,6 +117,11 @@ var shader = scene.make.shader({
         var textureKey = shader.getUniform('iChannel2').textureKey;
         var textureKey = shader.getUniform('iChannel3').textureKey;
         ```
+- Sets a property of a uniform already present on this shader.
+    ```javascript
+    shader.setUniform(key, value);
+    ```
+    - `key` : The key of the uniform to modify. Use dots for deep properties, i.e. `resolution.value.x`.
 - Sets a sampler2D uniform from texture manager.
     ```javascript
     shader.setChannel0(textureKey);
@@ -212,3 +230,30 @@ end
 ### Other properties
 
 See [game object](gameobject.md)
+
+### BaseShader
+
+```javascript
+var baseShader = new Phaser.Display.BaseShader(key, fragmentSrc, vertexSrc, uniforms);
+```
+
+- `key` : The key of this shader
+- `fragmentSrc` : The fragment source for the shader.
+- `vertexSrc` : The vertex source for the shader.
+    - `undefined`, or `''` : Use default vertex source.
+- `uniforms` : Optional object defining the uniforms the shader uses.
+    ```javascript
+    {
+        uniformName : {type: uniformType, value: initValue},
+        ...
+    }
+    ```
+    - `uniformName` : Uniform name in fragment source.
+    - `uniformType`, `initValue` : Type and initial value of uniform.
+        - `'1f'` : `initValue` is a single float value. 
+            - Example : `time: { type: '1f', value: 0 }`
+        - `'2f'` : `initValue` is float numbers `{x, y}`.
+            - Example : `resolution: { type: '2f', value: { x: this.width, y: this.height } }`
+        - `'3f'` : `initValue` is float numbers `{x, y, z}`.
+            - Example : `color: { type: '3f', value: {x: 0, y: 0, z: 0}}`
+        - `'4f'` : `initValue` is float numbers `{x, y, z, w}`.

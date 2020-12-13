@@ -666,18 +666,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../shader/" title="Shader" class="md-nav__link">
-      Shader
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -813,10 +801,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-3" type="checkbox" id="nav-4-2-3">
     
     <label class="md-nav__link" for="nav-4-2-3">
-      Mesh
+      Shader
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-2-3">
+        Shader
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shader/" title="Shader" class="md-nav__link">
+      Shader
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../effectlayer-outline/" title="Outline effect layer" class="md-nav__link">
+      Outline effect layer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-4" type="checkbox" id="nav-4-2-4">
+    
+    <label class="md-nav__link" for="nav-4-2-4">
+      Mesh
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-4">
         Mesh
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -968,6 +1004,13 @@
           <li class="md-nav__item">
   <a href="#remove-frame" class="md-nav__link">
     Remove frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-textures" class="md-nav__link">
+    Default textures
   </a>
   
 </li>
@@ -2833,6 +2876,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../shader-outline/" title="Outline" class="md-nav__link">
+      Outline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../shader-toonify/" title="Toonify" class="md-nav__link">
       Toonify
     </a>
@@ -3122,6 +3177,66 @@
 
   <li class="md-nav__item">
     <a href="../tcrp-player/" title="Player" class="md-nav__link">
+      Player
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-5" type="checkbox" id="nav-9-2-5">
+    
+    <label class="md-nav__link" for="nav-9-2-5">
+      Arcade-TCRP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-2-5">
+        Arcade-TCRP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arcade-tcrp-recoder/" title="Recoder" class="md-nav__link">
+      Recoder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arcade-tcrp-step-runner/" title="Step runner" class="md-nav__link">
+      Step runner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arcade-tcrp-player/" title="Player" class="md-nav__link">
       Player
     </a>
   </li>
@@ -4984,6 +5099,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../plugin-list/" title="Plugin list" class="md-nav__link">
+      Plugin list
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../tools/" title="Tools" class="md-nav__link">
       Tools
     </a>
@@ -5101,6 +5228,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#default-textures" class="md-nav__link">
+    Default textures
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5171,6 +5305,9 @@
     <div class="codehilite"><pre><span></span><code><span class="nx">scene</span><span class="p">.</span><span class="nx">load</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
 </code></pre></div>
     Reference: <a href="../loader/#image">Loader</a></li>
+<li>Load image texture via base64 string
+    <div class="codehilite"><pre><span></span><code><span class="nx">scene</span><span class="p">.</span><span class="nx">textures</span><span class="p">.</span><span class="nx">addBase64</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+</code></pre></div></li>
 <li>Get image texture
     <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">texture</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">textures</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nx">texture</span><span class="p">.</span><span class="nx">getSourceImage</span><span class="p">();</span>
@@ -5254,6 +5391,12 @@
 <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">removed</span> <span class="o">=</span> <span class="nx">texture</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">frameName</span><span class="p">);</span>
 </code></pre></div>
 
+<h4 id="default-textures">Default textures<a class="headerlink" href="#default-textures" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Default : <code>'__DEFAULT'</code></li>
+<li>Missing : <code>'__MISSING'</code></li>
+<li>4x4 white : <code>'__WHITE'</code></li>
+</ul>
 <h3 id="frame-object">Frame object<a class="headerlink" href="#frame-object" title="Permanent link">&para;</a></h3>
 <h4 id="get-frame">Get frame<a class="headerlink" href="#get-frame" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">frame</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">textures</span><span class="p">.</span><span class="nx">getFrame</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">frame</span><span class="p">);</span>
