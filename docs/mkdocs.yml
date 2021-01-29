@@ -46,6 +46,7 @@ nav:
             - Render texture: perspective-rendertexture.md
             - Card: perspective-card.md
             - Carousel: perspective-carousel.md
+            - Image carousel: perspective-imagecarousel.md
         - Shatter image: shatter-image.md
         - Rope: rope.md
     - Text:
@@ -198,15 +199,16 @@ nav:
           - Recoder: tcrp-recoder.md
           - Player: tcrp-player.md
       - Arcade-TCRP:
-          - Recoder: arcade-tcrp-recoder.md
+          - Recoder: arcade-tcrp-recorder.md
           - Step runner: arcade-tcrp-step-runner.md
           - Player: arcade-tcrp-player.md          
-    - FSM: fsm.md    
+    - FSM: fsm.md
     - CSV table:
         - Conditions table: conditionstable.md
     - Quest: 
         - Quest: quest.md
         - Dialog-quest: dialog-quest.md
+    - Bracket parser: bracketparser.md
 - Data:
     - Data manager: 
         - Built-in data: datamanager.md

@@ -116,7 +116,7 @@ Default style
     },
     underline: {
         color: '#000',
-        thinkness: 0,
+        thickness: 0,
         offset: 0
     },
     // align: 'left',  // Equal to halign
@@ -147,7 +147,24 @@ Default style
 }
 ```
 
-Add text from JSON
+or
+
+```javascript
+var txt = scene.add.rexBBCodeText({
+    x: 0,
+    y: 0,
+    text: '',
+    style: {
+        fontSize: '64px',
+        fontFamily: 'Arial',
+        color: '#ffffff',
+        align: 'center',
+        backgroundColor: '#ff00ff'
+    }
+})
+```
+
+or
 
 ```javascript
 var txt = scene.make.rexBBCodeText({
@@ -307,9 +324,9 @@ txt.setFontStyle(style);
         ```
     - Set
         ```javascript
-        txt.setUnderline(color, thinkness, ofset);
+        txt.setUnderline(color, thickness, ofset);
         txt.setUnderlineColor(color);
-        txt.setUnderlineThinkness(thinkness);
+        txt.setUnderlineThinkness(thickness);
         txt.setUnderlineOffset(ofset);
         ```
 - Background color
@@ -371,6 +388,8 @@ txt.setFontStyle(style);
     - `data` : `{imgKey, config}`
 
 ### Hit area of words
+
+Size of hit-area is word-width x line-height, or image-width x line-height.
 
 #### Hitting events
 

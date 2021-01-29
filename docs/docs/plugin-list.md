@@ -1,5 +1,8 @@
 ## List of my plugins
 
+!!! note "Version of phaser3"
+    Please upgrade your phaser3 to version >= **3.50**.
+
 1. [Anchor](anchor.md): Set position based on visible window.
 1. [Arcade-TCRP/Player](arcade-tcrp-player.md): Run commands on step of Arcade.
 1. [Arcade-TCRP/Recorder](arcade-tcrp-recorder.md): Store commands with step of Arcade.
@@ -15,6 +18,7 @@
 1. [Board/Move To](board-moveto.md): Move chess towards target position with a steady speed.
 1. [Board/Path finder](board-pathfinder.md): Find moveable area or moving path.
 1. [Board/Shape](board-shape.md): Grid (polygon) shape object.
+1. [Bracket parser](bracketparser.md): A lite-weight bracket parser.
 1. [Buff data](buffdata.md): Data manager with buffs.
 1. [Build arcade object](buildarcadeobject.md): Create arcade body, and inject arcade object methods.
 1. [Bullet](bullet.md): Move game object toward current angle of game object, with a constant speed.
@@ -75,6 +79,7 @@
 1. [Perspective/Card](perspective-card.md): A container with two perspective-images.
 1. [Perspective/Carousel](perspective-carousel.md): A container with cards.
 1. [Perspective/Image](perspective-image.md): Image with perspective rotation.
+1. [Perspective/ImageCarousel](perspective-imagecarousel.md): Display list of images.
 1. [Perspective/Render texture](perspective-rendertexture.md): Render texture with perspective rotation.
 1. [Pop up](popup.md): Scale up game object.
 1. [Quest](quest.md): Question manager.
